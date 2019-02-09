@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>baçura sustainbale fashion</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/logo_favicon.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+			<script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('clock').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		  return i;
+		}
+		</script>
+</head>
+<body>
+
+	<div class="intro">		
+			<img src="images/logo_text.png" alt="logo-text" width="200" id="logo-text">
+			<p>To give a new <strong>purpose</strong> (to something, such as clothing) with a view to shift <strong>ideas.</strong></p>
+	</div>
+
+	<div class="about">		
+	    <h2>about</h2>
+			<img src="images/about.jpg" alt="About" width="500">
+	  		<p><strong>baçura</strong> started in 2019 as an art project for founder and Creative Director; Samantha Doctora. Initially a passion project, baçura was conceived through late nights spent cogitating over a rapidly expanding body of designs and illustrations.</p>
+	 </div>
+
+	<div class="sustainability">		
+	    <h2>sustainability</h2>
+			<img src="images/sustainability.jpg" alt="Sutainability" width="500">
+	  		<p><strong>definition:</strong> the ability to continue a defined behaviour indefinitely. Also known as the ability to maintain healthy & balanced environmental, social and economic systems on a global and local scale.</p>
+	</div>
+    
+	<div class="impact">		
+	    <h2>impact of fashion</h2>
+			<img src="images/impact.jpg" alt="impact-of-fashion" width="500">
+	  		<p><strong>Fashion</strong> is the second largest polluter in the world, just after the oil industry, and one of the largest consumers of water. The environmental damage is increasing as the industry grows. However, there are solutions to mitigate these problems.The first step lies in building awareness and willingness to change.
+	  		</p>
+	</div>
+    
+	<div class="shop">		
+	    <h2>we see what we want jacket</h2>
+			<img src="images/jacket.jpg" alt="technical-jacket" width="500">
+	  		<p><strong>say hello to the 'WSWWW jacket'</strong>. a functionally-orientated piece, cut from a premium cotton and features large waist patch pockets, bound internal seams, and an oversized button-up front closure. Designed to offer a clean, minimal light jacket dripped in functionality perfect for both casual and formal cross-seasonal wear.</p>
+	  		<p>
+			<button type="button" class="btn btn-dark"><a href="http://www.samanthadoctora.com/urban-territory" target="_blank">shop now</a></button>
+			</p>
+	</div>
+    
+	<div class="contact">		
+	    <h2>contact</h2>
+	  		<p>
+
+				<form action="">
+					<div class="form-row">
+						<div class="col-xs-12 col-md-6 mb-6"><input type="text" class="form-control" id="validationfirstname" placeholder="first name" required>
+							<div class="valid-tooltip">Looks good!
+							</div>
+ 						</div>
+
+					 	<div class="col-xs-12 col-md-6 mb-6"><input type="text" class="form-control" id="validationlastname" placeholder="last name" required>
+					 		<div class="valid-tooltip">Looks good!
+   							</div>
+ 						</div>
+ 					</div>
+
+			  		<div class="form-group">
+				    	<label for="validationemail">email</label>
+				    	<input type="email" class="form-control" id="validationemail" placeholder="name@example.com" required>
+					</div>
+			    	
+			    	<div class="form-group">
+	   					<label for="FormSubject">subject</label><select class="form-control" id="FormSubject">
+					    <option>say "hello"</option>
+					    <option>let's collaborate</option>
+						<option>tell me more</option>
+					    </select>
+  					</div>
+
+			    	<div class="form-group">
+			    		<label for="FormMessage">message</label><textarea class="form-control" id="FormMessage" rows="3"></textarea>
+			  		</div>
+
+			  		 <button type="submit" class="btn btn-dark">Submit</button>
+		  		
+		  		</form>
+
+	  		</p>
+	</div>
+
+    <div class="footer">
+    		<body onload="startTime()">
+			<div id="clock"></div>
+			</body>
+    		<img src="images/logo_stack.png" alt="technical-jacket" width="80" id="logo-stack">
+    		<p>© 2019 baçura. this is a playground landing.</p>
+    		<a href="https://www.instagram.com/wearbacura" target="_blank">
+    			<img src="images/icon_instagram.png" alt="technical-jacket" width="30" id="icon-instagram">
+    		</a>
+    </div>
+
+
+
+
+
+</body>
+</html>
