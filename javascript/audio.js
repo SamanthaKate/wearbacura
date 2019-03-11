@@ -15,12 +15,12 @@ $(document).ready(function() {
             return item.hasPlayed = false;
         })
     }
-    
+
     function detectAudioSource() {
         var unplayedItem = playList.find(function(item) {
             return item.hasPlayed === false;
         });
-        
+
         if (unplayedItem) {
             unplayedItem.hasPlayed = true
             return unplayedItem.src;
@@ -31,18 +31,18 @@ $(document).ready(function() {
             return firstItem.src;
         }
     }
-    
+
     function setupAudioClickEvents() {
       var soundIcon = $("#icon-sound-nav");
-        
+
       soundIcon.click(() => {
         var audio = new Audio(
           detectAudioSource()
         );
-          
+
         audio.play();
       });
     }
-    
+
     setupAudioClickEvents();
 })
