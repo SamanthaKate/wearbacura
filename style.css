@@ -1,29 +1,16 @@
-
-body{
-  background: rgb(245,245,245);
-  font-size: 20px;
-  font-family: Helvetica;
+body h1, body h2, body h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
-h1{
-  font-family: 'Oswald', sans-serif;
-  color: #444444;
-  font-size: 40px;
-}
-
-h2 {
-  font-family: 'Oswald', sans-serif;
-  color: #444444;
-  font-size: 30px;
-}
-
-h1, h2, p{
-  text-transform: lowercase;
+.about {
+  margin-top: 100px;
 }
 
 p {
-  color: #222831;
-  font-family: 'Muli', sans-serif;
+  color: black;
+  font-family: 'Libre Franklin', sans-serif;
   text-align: center;
   font-size: 15px;
   max-width: 600px;
@@ -31,6 +18,166 @@ p {
   margin-right: auto;
   padding-top: 20px;
 }
+
+/* navigation styling START */
+
+#icon-sound-nav-test {
+    cursor: pointer;
+}
+
+.topnav {
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  position: fixed;
+  background: white;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  height: auto; /* The height automatically fills the available space */
+  transition: all 300ms ease;
+}
+
+.topnav-is-hidden {
+  top: -150px;
+}
+
+.topnav-container {
+  display: flex;
+}
+
+.topnav li {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: normal;
+  list-style: none;
+  display: inline-block;
+  padding: 15px 8px 0px 8px;
+}
+
+.topnav-item a {
+    padding: 10px;
+}
+
+#icon-sound-nav {
+    box-shadow: none;
+    width: auto;
+    height: 30px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+#logo-text-nav {
+    box-shadow: none;
+    width: auto;
+    height: 40px;
+
+}
+
+.topnav-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:link {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active, a:visited {
+    color: grey;
+}
+
+.topnav-item li a:hover {
+    text-decoration: none;
+    background-color: rgba(116, 116, 116, 0.1);
+    color: grey;
+}
+
+/* navigation styling MOBILE START */
+
+@media (max-width:600px) {
+
+    /* the hamburger will appear when width is less than 600px */
+    .hamburger {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.80) url(./images/hamburger.svg) no-repeat;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        border-radius: 5px;
+        box-shadow: none;
+        position: fixed;
+    }
+
+    /* .close is a javascript class, so when the .topnav item is closed this image will appear */
+    .hamburger.close {
+        background-image: url(./images/close.svg);
+        position: fixed;
+    }
+
+    .topnav {
+        position: fixed;
+        z-index: 1;
+        /*    hide the menu*/
+        overflow: hidden;
+        /*    hide the menu content by reducing the height to 0*/
+        height: 50px;
+        transition: 0.5s;
+    }
+
+    /* reveal the menu */
+    .topnav-is-hidden {
+      top: -150px;
+    }
+
+    .topnav.open {
+        height: 320px;
+        top: 0;
+    }
+
+    .topnav-container {
+        display: block;
+        margin-top: 40px;
+    }
+
+
+    /* flex items */
+    #icon-sound-nav {
+        position: absolute;
+        /* position: fixed; */
+        top: 8px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #logo-text-nav {
+        position: absolute;
+        /* position: fixed; */
+        top: 12px;
+        width: auto;
+        height: 30px;
+        margin-left: -40px;
+    }
+
+
+    .topnav-item li {
+        color: #8e8e8e;
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin-left: -40px;
+    }
+
+}
+
+/* navigation styling ENDS */
 
 .btn a {
   text-decoration: none;
@@ -46,59 +193,66 @@ p {
 .intro, .about, .sustainability, .impact, .shop, .contact {
   background-color: white;
   padding: 20px;
-  margin: 10px;
   text-align: center;
 }
 
 img {
- box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
+ box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
  max-width: 100%;
- margin-left: auto;
- margin-right: auto;
+ margin: auto;
 }
 
-form {
-  margin-right: 5%;
-  margin-left: 5%;
-}
 
-.form-row, .form-group {
-  padding: 10px;
-}
-
-#validationlastname {
-  padding-top: 10px;
-}
-
-#logo-text, #logo-stack{
-  box-shadow: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-a #icon-instagram {
-  box-shadow: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-}
+ /* footer styling STARTS */
 
 .footer {
-  background-color: #e0e0e0;
-  padding: 20px;
+  display: grid;
+  background-color: #f2f2f2;
+  padding: 30px;
+  margin: 0 auto;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+/*    grid-template-rows: auto 1fr auto;*/
+  grid-gap: 5px;
+}
+
+.footer h3 {
+  font-size: 15px;
+  color: grey;
 }
 
 .footer p {
-  font-size: 15px;
+  font-size: 12px;
+  text-align: left;
+  margin-top: -20px;
+  color: grey;
 }
 
 #clock {
-  width: 60px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  font-family: 'Muli', sans-serif;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+}
+
+#logo-stack {
+  box-shadow: none;
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: auto;
+}
+
+.footer li {
+  list-style: none;
+  font-size: 12px;
+  margin-left: -40px;
+}
+
+#copyright {
+  margin-top: 75px;
 }
 
 
@@ -106,3 +260,4 @@ a #icon-instagram {
 
 
 
+/* footer styling ENDS */

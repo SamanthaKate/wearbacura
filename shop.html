@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>baçura sustainable fashion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalise.css">
+	<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ptr8gsv.css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    
+	<link rel="shortcut icon" href="images/logo_favicon.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+<!-- humburger menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // you can tell this is jQuery because it has the $ sign
+            $('.hamburger').on('click', function() {
+                    $('.topnav').toggleClass('open');
+                    $(this).toggleClass('close');
+                });
+            
+                $('.topnav-item a').on('click', function() {
+                    // close the menu
+                    $('.topnav').removeClass('open');
+                    // reset the hamburger icon
+                $('.hamburger').removeClass('close');
+                });
+        });
+    </script>
+
+<!-- clock -->
+    <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('clock').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		  return i;
+		}
+    </script>
+    <script src="js.js"></script>
+    
+</head>
+
+<!-- body starts here -->
+<body>
+    
+<div class="hamburger"></div>
+	<nav class="topnav">
+        <div class="topnav-container">
+            
+            <div class="topnav-item">           
+				<img src="images/icon_sound.png" alt="icon-sound" width="30" id="icon-sound-nav">
+			</div>
+            
+			<div class="topnav-item">
+                <a href="index.html"><img src="images/logo_text.png" alt="logo-text" width="80" id="logo-text-nav"></a>
+			</div>
+			
+			<div class="topnav-item">
+
+                <ul>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">sustainability</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Shop</h1>
+
+    
+	<div class="shop">		
+	    <h2>we see what we want jacket</h2>
+			<img src="images/jacket.jpg" alt="technical-jacket" width="500">
+	  		<p><strong>say hello to the 'WSWWW jacket'</strong>. a functionally-orientated piece, cut from a premium cotton and features large waist patch pockets, bound internal seams, and an oversized button-up front closure. Designed to offer a clean, minimal light jacket dripped in functionality perfect for both casual and formal cross-seasonal wear.</p>
+	  		<p>
+			<button type="button" class="btn btn-dark"><a href="http://www.samanthadoctora.com/urban-territory" target="_blank">shop now</a></button>
+			</p>
+	</div>
+
+    <div class="footer">
+    		<body onload="startTime()">
+			<div id="clock"></div>
+			</body>
+
+			<a href="https://www.instagram.com/wearbacura" target="_blank">
+    		<img src="images/icon_instagram.png" alt="technical-jacket" width="30" id="icon-instagram"></a>
+
+    		<img src="images/logo_stack.png" alt="technical-jacket" width="80" id="logo-stack">
+
+    		<p>© 2019 baçura. this is a playground landing.</p>
+    </div>
+</body>
+</html>
